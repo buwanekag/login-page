@@ -14,36 +14,60 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gw2-Dq-1n0">
-                                <rect key="frame" x="224" y="237" width="153" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gw2-Dq-1n0">
+                                <rect key="frame" x="84" y="240" width="153" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="to9-ej-e8x">
-                                <rect key="frame" x="224" y="304" width="153" height="30"/>
+                                <rect key="frame" x="84" y="309" width="153" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5x-o9-oCt">
-                                <rect key="frame" x="262" y="390" width="82" height="33"/>
+                                <rect key="frame" x="119" y="381" width="82" height="33"/>
                                 <state key="normal" title="LOGIN"/>
+                                <connections>
+                                    <action selector="signinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L7w-30-dyC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="EqD-KW-LcN"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="loginButton" destination="f5x-o9-oCt" id="2hT-xn-Fke"/>
-                        <outlet property="passwordTextfield" destination="to9-ej-e8x" id="tpm-2U-s7S"/>
-                        <outlet property="username" destination="gw2-Dq-1n0" id="mE4-6n-gnE"/>
+                        <outlet property="passwordTextField" destination="to9-ej-e8x" id="mdi-EZ-f9d"/>
+                        <outlet property="usernameTextField" destination="gw2-Dq-1n0" id="nA8-gh-UAA"/>
+                        <segue destination="GfQ-ny-2VV" kind="presentation" id="LCs-69-5Lx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="337"/>
+            <point key="canvasLocation" x="719" y="321"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IdC-FN-ieE">
+            <objects>
+                <viewController id="GfQ-ny-2VV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oxo-E2-ho5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z4V-Il-QmI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eJQ-jC-fQQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29O-I7-fZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1172" y="321"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="URi-UV-ET9">
